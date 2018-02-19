@@ -1,0 +1,4 @@
+<div [ngClass]="{'show-nav' : toggle}" class="sidenav">
+  <a class="nav-closebtn" (click)="closeNav()">&times;</a>
+  <a *ngFor="let menuItem of menuItems" (click)="selectItem(menuItem)">{{menuItem}}</a>
+</div>

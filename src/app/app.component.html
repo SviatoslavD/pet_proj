@@ -1,0 +1,35 @@
+<div class="app-container" [ngClass]="{'app-slide-container' : sideNavToggle}">
+  <!-- <div class="background-wrap">
+    <video autoplay preload="auto" loop muted>
+      <source src="src/assets/bg_video.mp4" type="video/mp4" />
+    </video>
+  </div> -->
+
+  <progress-bar></progress-bar>
+  <icon-bar (iconBarItemChange)="onScrolling($event)"></icon-bar>
+
+  <span class="app-menu-open-btn" (click)="openNav()">&#9776;</span>
+  <side-nav [toggle]="sideNavToggle"
+            (toggleChange)= "onToggleChange($event)"
+            (selectMenuItemChange)="onScrolling($event)">
+  </side-nav>
+
+  <profile></profile>
+  <!-- <nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+  </nav> -->
+  <!-- <router-outlet></router-outlet> -->
+  <div class="experiences">
+    <experiences></experiences>
+  </div>
+  <div class="abilities">
+    Abilities
+  </div>
+  <div class="projects">
+    Projects
+  </div>
+  <div class="contact">
+    Contact
+  </div>
+</div>
